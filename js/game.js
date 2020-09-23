@@ -46,8 +46,14 @@ function createBoard(boardSize) {
     return board;
 }
 
-function cellClicked(el) {
+function cellClicked(el, i, j) {
     console.log(el);
+    var cell = gBoard[i][j];
+    gBoard[i][j].isShown = true
+    console.log(gBoard[i][j]);
+    rnderCell(i, j)
+    // console.log(cell);
+    // cell.isShown = true;
 }
 
 function renderBoard(board) {
@@ -58,7 +64,7 @@ function renderBoard(board) {
         for (var j = 0; j < board[0].length; j++) {
             var cell = row[j];
             var className = cell.isMine === true ? 'mine' : 'empty';
-            strHtml += `<td onclick="cellClicked(this)" data-i="${i}" data-j="${j}" id="cell${i}-${j}" class="${className}">`
+            strHtml += `<td onclick="cellClicked(this, ${i}, ${j})" data-i="${i}" data-j="${j}" id="cell${i}-${j}" class="${className}">`
             strHtml += cell;
             strHtml += '</td>'
         }
