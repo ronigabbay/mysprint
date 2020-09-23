@@ -1,0 +1,30 @@
+body{
+  background-color: aqua;
+}
+
+
+table{
+  border: 1px solid black;
+  table-layout: fixed ;
+  width: 50% ;
+}
+
+/* tr{
+  width: 25% ;
+  height: 25%;
+} */
+
+td{
+  border: 1px solid black;
+  width: 20px ;
+  height: 20px;
+}
+/* } */
+/* 
+table {
+  table-layout: fixed ;
+  width: 100% ;
+}
+td {
+  width: 25% ;
+} */
