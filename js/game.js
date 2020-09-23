@@ -18,7 +18,7 @@ function init() {
 function createCell() {
     var cell = {
         minesAroundCount: 0,
-        isShown: true,
+        isShown: false,
         isMine: false,
         isMarked: true
     }
@@ -35,7 +35,7 @@ function createBoard(boardSize) {
             if (i === 1 && j === 1 || i === 3 && j === 0) {
                 board[i][j] = {
                     minesAroundCount: 0,
-                    isShown: true,
+                    isShown: false,
                     isMine: true,
                     isMarked: true
                 }
@@ -46,7 +46,7 @@ function createBoard(boardSize) {
     return board;
 }
 
-function cellClicked(el){
+function cellClicked(el) {
     console.log(el);
 }
 
@@ -81,12 +81,13 @@ function rendBoardMine(board) {
 function rnderCell(i, j) {
     var elCell = document.querySelector(`[data-i="${i}"][data-j="${j}"]`);
     // console.log(elCell);
-    if (elCell.classList.contains('mine')) {
-        elCell.innerText = MINE;
-    }
-    if (elCell.classList.contains('empty') && gBoard[i][j].isShown === true) {
-        elCell.innerText = gBoard[i][j].minesAroundCount;
-    } else if (elCell.classList.contains('empty') && gBoard[i][j].isShown === false){
+    if (gBoard[i][j].isShown === true) {
+        if (elCell.classList.contains('mine')) {
+            elCell.innerText = MINE;
+        } else if (elCell.classList.contains('empty')) {
+            elCell.innerText = gBoard[i][j].minesAroundCount;
+        }
+    } else {
         elCell.innerText = ' ';
     }
 
