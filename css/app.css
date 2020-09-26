@@ -1,7 +1,10 @@
 body{
-  background-color: rgb(187, 187, 121);
+  background-color: rgb(10, 10, 10);
 }
 
+h1{
+  color: white;
+}
 
 table{
   background-color:aqua;
@@ -10,33 +13,74 @@ table{
   width: 20% ;
   margin: 0 auto;
 }
+
 td{
   width: 33.33%;
+  height: 33.33%;
   position: relative;
   border: 1px solid black;
-  width: 20px ;
-  height: 20px;
+  width: 15px ;
+  height: 15px;
+  font-size: small;
+  text-align: center;
 }
 
+h4{
+  display: inline;
+  margin: 10px;
+}
 
+.level1{
+  background-color: green;
+  border: 3px solid white;
+}
+
+.level2{
+  background-color: yellow;
+  border: 3px solid white;
+}
+
+.level3{
+  background-color: red;
+  border: 3px solid white;
+}
+
+.element{
+  text-align: center;
+}
+/* 
+.rowUp{
+  background-color:white;
+  margin: auto 200px;
+} */
 
 .levelBtn{
   text-align: center;
 }
 
-
+.timeLive{
+  text-align: center;
+}
 
 .lives{
   text-align: center;
-}
+  color:white;
+} 
 .timer{
+  margin-left: 430px;
   text-align: center;
+  border: 2px solid white;
+  background-color: deeppink;
 }
 
-.smileBtnLine{
+.marked{
+  color:white;
+}
+
+/* .smileBtnLine{
   text-align: center;
   margin: 0 auto;
-}
+} */
 
 
 .overHide{
@@ -49,6 +93,7 @@ td{
   background-color: red;
   text-align: center;
   display: block;
+  padding: 50px;
 }
 
 
@@ -59,9 +104,10 @@ td{
 }
 
 .wonShow{
-  background-color: saddlebrown;
+  background-color: blue;
   text-align: center;
   display: block;
+  padding: 50px;
 }
 
 

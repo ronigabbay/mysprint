@@ -9,25 +9,35 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 
+
 <body onload="init()">
-    <h1>sprint</h1>
     <div>
-        <h3 class="overHide">Game Over</h3>
-        <h3 class="wonHide">You Won</h3>
+        <h3 class="overHide over">Game Over</h3>
+        <h3 class="wonHide won">You Won</h3>
     </div>
 
-    <h4 class="lives" >Lives Left: <span> 3</span></h4>
-    <h4 class="timer">Time:</h4>
-   
+
     <div class="conteiner">
         <h3 class="levelBtn">
-            <button onclick="Beginner()">Beginner </button>
-            <button onclick="Medium()">Medium </button>
-            <button onclick="Expert()">Expert </button>
+            <button class="level1" onclick="Beginner()">Beginner </button>
+            <button class="level2" onclick="Medium()">Medium </button>
+            <button class="level3" onclick="Expert()">Expert </button>
         </h3>
-        <h3 class="smileBtnLine">
-            <button onclick="restartGame(this)">😀</button>
-        </h3>
+    </div>
+
+    <h4 class="timer"><span>0.000</span></h4>
+    <div class="timeLive">
+    </div>
+
+    <div class="element">
+        <div class="rowUp">
+            <h4 class="marked">2</h4>
+            <h4>
+                <button class="smileBtn" onclick="restartGame(this)">😀</button>
+            </h4>
+            <h4 class="lives">❤️<span> 3</span></h4>
+        </div>
+
         <table cellpadding="5">
             <tbody class="board"> </tbody>
         </table>
