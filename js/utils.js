@@ -18,19 +18,15 @@ function countNeighbors(cellI, cellJ, mat) {
   return neighborsSum;
 }
 
-
-
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
-
-
-
 
 function Beginner() {
   gGame.isOn = false;
   clearInterval(gTimer);
   gMistakeAllowed = 3;
+  gIsPutMine = false;
 
   var elLives = document.querySelector('.lives span');
   elLives.innerText = gMistakeAllowed;
@@ -38,7 +34,7 @@ function Beginner() {
   var elTime = document.querySelector('.timer span');
   elTime.innerText = '0.000';
 
-  var elMarked = document.querySelector('.marked')
+  var elMarked = document.querySelector('.marked span')
   elMarked.innerText = '2'
 
   if (gIsWon === false) {
@@ -71,6 +67,7 @@ function Medium() {
   clearInterval(gTimer);
   gGame.markedCount = 12;
   gMistakeAllowed = 3;
+  gIsPutMine = false;
 
   var elLives = document.querySelector('.lives span');
   elLives.innerText = gMistakeAllowed;
@@ -78,7 +75,7 @@ function Medium() {
   var elTime = document.querySelector('.timer span');
   elTime.innerText = '0.000';
 
-  var elMarked = document.querySelector('.marked')
+  var elMarked = document.querySelector('.marked span')
   elMarked.innerText = '12'
 
   if (gIsWon === false) {
@@ -109,6 +106,7 @@ function Expert() {
   gGame.isOn = false;
   clearInterval(gTimer);
   gGame.markedCount = 30;
+  gIsPutMine = false;
 
   gMistakeAllowed = 3;
   var elLives = document.querySelector('.lives span');
@@ -117,7 +115,7 @@ function Expert() {
   var elTime = document.querySelector('.timer span');
   elTime.innerText = '0.000';
 
-  var elMarked = document.querySelector('.marked')
+  var elMarked = document.querySelector('.marked span')
   elMarked.innerText = '30'
 
   if (gIsWon === false) {
@@ -144,10 +142,6 @@ function Expert() {
   gGame.markedCount = gLevel.mines;
   init()
 }
-
-
-
-
 
 function startTime() {
   if (gGame.isOn === false) return;

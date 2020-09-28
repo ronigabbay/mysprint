@@ -3,7 +3,9 @@ body{
 }
 
 h1{
+  text-align: center;
   color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 table{
@@ -12,6 +14,7 @@ table{
   table-layout: fixed ;
   width: 20% ;
   margin: 0 auto;
+  border: 4px solid white
 }
 
 td{
@@ -25,6 +28,11 @@ td{
   text-align: center;
 }
 
+td:hover{
+  background-color: mediumslateblue;
+  cursor: pointer;
+}
+
 h4{
   display: inline;
   margin: 10px;
@@ -33,29 +41,32 @@ h4{
 .level1{
   background-color: green;
   border: 3px solid white;
+  border-radius: 40%;
+  font-family: cursive;
 }
 
 .level2{
   background-color: yellow;
   border: 3px solid white;
+  border-radius: 40%;
+  font-family: cursive;
 }
 
 .level3{
   background-color: red;
   border: 3px solid white;
+  border-radius: 40%;
+  font-family: cursive;
 }
 
 .element{
   text-align: center;
 }
-/* 
-.rowUp{
-  background-color:white;
-  margin: auto 200px;
-} */
+
 
 .levelBtn{
   text-align: center;
+ 
 }
 
 .timeLive{
@@ -77,12 +88,6 @@ h4{
   color:white;
 }
 
-/* .smileBtnLine{
-  text-align: center;
-  margin: 0 auto;
-} */
-
-
 .overHide{
   background-color: red;
   text-align: center;
@@ -93,10 +98,13 @@ h4{
   background-color: red;
   text-align: center;
   display: block;
-  padding: 50px;
+  padding: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 2px solid white;
+  font-family: Verdana;
 }
-
-
+  
 .wonHide{
   background-color: saddlebrown;
   text-align: center;
@@ -104,10 +112,16 @@ h4{
 }
 
 .wonShow{
-  background-color: blue;
+  background-color: rgb(27, 199, 230);
   text-align: center;
   display: block;
-  padding: 50px;
+  padding: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 2px solid white;
+  font-family: Verdana;
 }
 
-
+.open{
+  background-color: darkgrey;
+}
